@@ -34,50 +34,28 @@ def stock_count(shop)
 end
 
 
-def pets_by_breed(shop, breed_query)
-	breed_match = []
-	for pets in shop [:pets]
-		if breed_query == pets [:breed]
-			breed_match.push(pets)
-		end
-	end
-	return breed_match
-end
+# def all_pets_by_breed__found(shop, breed_query)
+#
+# end
+#
+#
+# def all_pets_by_breed__not_found(shop, breed_query)
+#
+# end
 
 
-def test_all_pets_by_breed__not_found(shop, breed_query)
-	breed_match = [nil]
-	for pets in shop [:pets]
-		if breed_query == pets [:breed]
-			breed_match.push(pets)
-		end
-	end
-	return breed_match
-end
-
-
-def find_pet_by_name(shop, name)
+def find_pet_by_name__returns_pet(shop, name)
  for pet in shop [:pets]
 	if name == pet [:name]
 		return pet
 	end
  end
- return nil
+ # return nil
 end
 
-
-def find_pet_by_name(shop, name)
- for pet in shop [:pets]
-	if name == pet [:name]
-		return pet
-	end
- end
- return nil
-end
-
-
-def remove_pet_by_name(shop, name)
-	for pet in shop [:pets]
-		shop [:pets].delete(pet) if pet [:name] == name
-	end
-end
+#
+# def remove_pet_by_name(shop, name)
+#   for pet in shop [:pets]
+#  		shop [:pets].delete(pet) if pet [:name] == name
+#  	end
+# end
