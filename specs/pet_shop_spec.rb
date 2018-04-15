@@ -77,10 +77,10 @@ class TestPetShop < Minitest::Test
     assert_equal("Camelot of Pets", name)
   end
 
-  # def test_total_cash
-  #   sum = total_cash(@pet_shop)
-  #   assert_equal(1000, sum)
-  # end
+  def test_total_cash
+    sum = total_cash(@pet_shop)
+    assert_equal(1000, sum)
+  end
 
   # def test_add_or_remove_cash__add
   #   add_or_remove_cash(@pet_shop,10)
@@ -143,7 +143,7 @@ class TestPetShop < Minitest::Test
   # end
 
   # def test_customer_cash
-  #   cash = customer_cash(customer[0])
+  #   cash = customer_cash(customer[0])   error  cash = customer_cash(@customers[0])
   #   assert_equal(1000, cash)
   # end
 
@@ -212,7 +212,7 @@ class TestPetShop < Minitest::Test
 
   #   assert_equal(0, customer_pet_count(customer))
   #   assert_equal(0, pets_sold(@pet_shop))
-  #   assert_equal(1000, customer_cash(@pet_shop))
+  #   assert_equal(1000, customer_cash(@pet_shop))   error  ==>  assert_equal(50, customer_cash(customer))
   #   assert_equal(1000, total_cash(@pet_shop))
   # end
 
