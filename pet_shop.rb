@@ -34,28 +34,61 @@ def stock_count(shop)
 end
 
 
-# def all_pets_by_breed__found(shop, breed_query)
-#
-# end
-#
-#
-# def all_pets_by_breed__not_found(shop, breed_query)
+# def all_pets_by_breed__found(pet_shop, breed)
 #
 # end
 
 
-def find_pet_by_name__returns_pet(shop, name)
- for pet in shop [:pets]
-	if name == pet [:name]
-		return pet
-	end
- end
- # return nil
+# def all_pets_by_breed__not_found(shop, breed)
+# 	breed_match = []
+# 	for pets in shop[:pets]
+# 		if breed == pets[:breed]
+# 			breed_match.push(pets)
+# 		end
+# 	end
+# 	return breed_match
+# end
+
+
+# def test_find_pet_by_name__returns_pet
+#
+# end
+
+
+# def test_find_pet_by_name__returns_nil
+#
+# end
+
+
+# def remove_pet_by_name(shop, name)
+# 	for name in shop [:pets]
+# 		shop [:pets].delete(pet) if pet [:name] == name
+# 	end
+# end
+
+
+def add_pet_to_stock(shop, new_pet)
+	shop [:pets] << new_pet
+	return shop [:pets].length
 end
 
+
+# def test_customer_cash
 #
-# def remove_pet_by_name(shop, name)
-#   for pet in shop [:pets]
-#  		shop [:pets].delete(pet) if pet [:name] == name
-#  	end
 # end
+
+
+# def remove_customer_cash
+#
+# end
+
+
+def customer_pet_count(customer)
+	return customer [:pets].length
+end
+
+
+def add_pet_to_customer(customer, new_pet)
+	customer [:pets] << new_pet
+  return customer [:pets].length
+end
