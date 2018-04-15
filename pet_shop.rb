@@ -34,19 +34,18 @@ def stock_count(shop)
 end
 
 
-# def all_pets_by_breed__found(pet_shop, breed)
-#
-# end
+def all_pets_by_breed__found(shop, breed)
+  match = []
+    for pets in shop [:pets]
+      if breed == pets [:breed] << match
+      end
+    end
+    return match
+end
 
 
 # def all_pets_by_breed__not_found(shop, breed)
-# 	breed_match = []
-# 	for pets in shop[:pets]
-# 		if breed == pets[:breed]
-# 			breed_match.push(pets)
-# 		end
-# 	end
-# 	return breed_match
+#
 # end
 
 
@@ -56,7 +55,7 @@ end
 
 
 # def test_find_pet_by_name__returns_nil
-#
+
 # end
 
 
